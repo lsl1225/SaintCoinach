@@ -4,6 +4,38 @@
   "definitions": [
     {
       "name": "Name"
+    },
+    {
+      "index": 1,
+      "type": "repeat",
+      "count": 5,
+      "definition": {
+        "name": "Action",
+        "converter": {
+          "type": "link",
+          "target": "Action"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "name": "CanUsePetActions"
+    },
+    {
+      "index": 8,
+      "name": "IsShowPetHotbar"
+    },
+    {
+      "index": 9,
+      "name": "Scale(Small)"
+    },
+    {
+      "index": 10,
+      "name": "Scale(Medium)"
+    },
+    {
+      "index": 11,
+      "name": "Scale(Large)"
     }
   ]
 }

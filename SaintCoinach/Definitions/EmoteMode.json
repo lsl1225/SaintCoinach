@@ -36,6 +36,10 @@
     {
       "index": 6,
       "name": "ConditionMode"
+    },
+    {
+      "index": 7,
+      "name": "GPoseIgnoreLoop"
     }
   ]
 }
