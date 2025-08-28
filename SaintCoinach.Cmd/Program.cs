@@ -18,10 +18,19 @@ namespace SaintCoinach.Cmd {
     class Program {
         private static void Main(string[] args) {
             var dataPath = Properties.Settings.Default.DataPath;
+            var lang = Ex.Language.English;
 
             if (args.Length > 0) {
                 dataPath = args[0];
                 args = args.Skip(1).ToArray();
+
+                if (args[0] != null) {
+                    var parsedLang = Ex.LanguageExtensions.GetFromCode(args[0]);
+                    if (parsedLang != Ex.Language.Unsupported) {
+                        lang = parsedLang;
+                    }
+                    args = args.Skip(1).ToArray();
+                }
             }
             if (string.IsNullOrWhiteSpace(dataPath))
                 dataPath = SearchForDataPaths().FirstOrDefault(p => System.IO.Directory.Exists(p));
@@ -32,12 +41,13 @@ namespace SaintCoinach.Cmd {
                 return;
             }
 
-            var realm = new ARealmReversed(dataPath, @"SaintCoinach.History.zip", Ex.Language.English, @"app_data.sqlite");
+            var realm = new ARealmReversed(dataPath, @"SaintCoinach.History.zip", lang, @"app_data.sqlite");
             realm.Packs.GetPack(new IO.PackIdentifier("exd", IO.PackIdentifier.DefaultExpansion, 0)).KeepInMemory = true;
 
             Console.WriteLine("Game version: {0}", realm.GameVersion);
             Console.WriteLine("Definition version: {0}", realm.DefinitionVersion);
-            
+            Console.WriteLine("Current Language: {0}", lang.ToString());
+
             if (!realm.IsCurrentVersion) {
                 Console.Write("Update is available, perform update (Y/n)? ");
                 var updateQuery = Console.ReadLine();
@@ -50,7 +60,7 @@ namespace SaintCoinach.Cmd {
                 } else
                     Console.WriteLine("Skipping update");
             }
-            
+
             var cns = new Tharga.Console.Consoles.ClientConsole();
             var cmd = new RootCommand(cns);
 
