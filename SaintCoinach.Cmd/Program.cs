@@ -24,7 +24,7 @@ namespace SaintCoinach.Cmd {
                 dataPath = args[0];
                 args = args.Skip(1).ToArray();
 
-                if (args[0] != null) {
+                if (args.Length > 0) {
                     var parsedLang = Ex.LanguageExtensions.GetFromCode(args[0]);
                     if (parsedLang != Ex.Language.Unsupported) {
                         lang = parsedLang;
