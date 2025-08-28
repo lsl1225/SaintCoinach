@@ -8,7 +8,7 @@
     {
       "index": 2,
       "type": "repeat",
-      "count": 4,
+      "count": 7,
       "definition": {
         "name": "Action",
         "converter": {

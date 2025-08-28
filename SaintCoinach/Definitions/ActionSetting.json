@@ -1,0 +1,32 @@
+{
+  "sheet": "ActionSetting",
+  "definitions": [
+    {
+      "name": "Action",
+      "converter": {
+        "type": "link",
+        "target": "Action"
+      }
+    },
+    {
+      "index": 1,
+      "name": "ActionReplace",
+      "converter": {
+        "type": "link",
+        "target": "Action"
+      }
+    },
+    {
+      "index": 2,
+      "name": "IsEnableActionChange"
+    },
+    {
+      "index": 4,
+      "name": "IsAllowRecastTimer"
+    },
+    {
+      "index": 6,
+      "name": "Recast"
+    }
+  ]
+}

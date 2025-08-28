@@ -6,6 +6,26 @@
       "name": "Model"
     },
     {
+      "index": 1,
+      "name": "AttachmentPoint"
+    },
+    {
+      "index": 2,
+      "name": "VisibilityState"
+    },
+    {
+      "index": 3,
+      "name": "IdlePoseGroup"
+    },
+    {
+      "index": 4,
+      "name": "OrnamentActionSet",
+      "converter": {
+        "type": "link",
+        "target": "OrnamentAction"
+      }
+    },
+    {
       "index": 5,
       "name": "Order"
     },

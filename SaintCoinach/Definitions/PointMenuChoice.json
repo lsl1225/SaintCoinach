@@ -1,0 +1,36 @@
+{
+  "sheet": "PointMenuChoice",
+  "definitions": [
+    {
+      "name": "ArrowXOffset",
+    },
+    {
+      "index": 1,
+      "name": "ArrowYOffset"
+    },
+    {
+      "index": 4,
+      "name": "SelectionXScale"
+    },
+    {
+      "index": 5,
+      "name": "SelectionYScale",
+    },
+    {
+      "index": 6,
+      "name": "SelectionXOffset"
+    },
+    {
+      "index": 7,
+      "name": "SelectionYOffset",
+    },
+    {
+      "index": 12,
+      "name": "PointMenuString",
+      "converter": {
+        "type": "link",
+        "target": "PointMenuString"
+      }
+    }
+  ]
+}

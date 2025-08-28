@@ -3,8 +3,47 @@
   "defaultColumn": "Name",
   "definitions": [
     {
+      "name": "Scale"
+    },
+    {
       "index": 2,
       "name": "Name"
+    },
+    {
+      "index": 3,
+      "type": "repeat",
+      "count": 13,
+      "definition": {
+        "name": "Action",
+        "converter": {
+          "type": "link",
+          "target": "Action"
+        }
+      }
+    },
+    {
+      "index": 33,
+      "type": "repeat",
+      "count": 13,
+      "definition": {
+        "name": "Animation",
+        "converter": {
+          "type": "link",
+          "target": "ActionTimeline"
+        }
+      }
+    },
+    {
+      "index": 48,
+      "type": "repeat",
+      "count": 13,
+      "definition": {
+        "name": "HitAnimation",
+        "converter": {
+          "type": "link",
+          "target": "ActionTimeline"
+        }
+      }
     }
   ]
 }

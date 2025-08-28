@@ -54,6 +54,14 @@
       "name": "ResidentPap"
     },
     {
+      "index": 12,
+      "name": "SwimTimeline",
+      "converter": {
+        "type": "link",
+        "target": "ActionTimelineReplace"
+      }
+    },
+    {
       "index": 13,
       "name": "KillUpper"
     },
@@ -62,8 +70,16 @@
       "name": "IsMotionCanceledByMoving"
     },
     {
+      "index": 15,
+      "name": "PapType"
+    },
+    {
       "index": 18,
       "name": "IsLoop"
+    },
+    {
+      "index": 20,
+      "name": "ViperBladeState"
     }
   ]
 }
